@@ -1,27 +1,37 @@
-# JobListings
+[![Netlify Status](https://api.netlify.com/api/v1/badges/88349b7b-8ab9-4cf8-80e9-22b5d4fdeed6/deploy-status)](https://app.netlify.com/sites/gregarious-flan-6a0381/deploys) ![Github actions](https://github.com/ktscates/manage-landing-page/actions/workflows/node.js.yml/badge.svg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+# Frontend Mentor - Job listings with filtering
 
-## Development server
+This is a solution to the [Job listings with filtering](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### The challenge
 
-## Code scaffolding
+Users should be able to:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Filter job listings based on the categories selected
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-## Build
+### Screenshot
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Manage landing page](/assets/images/desktop-preview.jpg)
 
-## Running unit tests
+### Links
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Solution URL: [On github](https://github.com/ktscates/job-listings)
+- Live Site URL: [Live](https://gregarious-flan-6a0381.netlify.app/)
 
-## Running end-to-end tests
+### Built with
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Angular](https://angular.dev/) - Angular
+- [TailwindCSS](https://nextjs.org/) - CSS framework
 
-## Further help
+### Useful resources
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Angular](https://angular.dev/) - Angular
+- [TailwindCSS](https://nextjs.org/) - CSS framework
+
+## Author
+
+- Github - [Cates Nsengiyumva](https://github.com/ktscates)
+- Frontend Mentor - [@ktscates](https://www.frontendmentor.io/profile/ktscates)

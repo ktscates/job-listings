@@ -1,0 +1,41 @@
+@if(filters.languages.length > 0 || filters.tools.length > 0){
+<div
+  class="md:max-w-[1440px] mx-6 -mt-12 md:-mt-8 bg-light-cyan drop-shadow-2xl flex justify-between rounded-xl font-primary text-lg py-6 md:py-2"
+>
+  <div class="flex gap-4 px-4">
+    @for(language of filters.languages; track $index){
+    <div class="flex">
+      <div
+        class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg text-dark-cyan-des font-bold text-lg"
+      >
+        {{ language }}
+      </div>
+      <span
+        class="text-light-gray font-bold text-xl cursor-pointer bg-dark-cyan-des hover:bg-dark-cyan px-3 py-2 rounded-r-lg"
+        (click)="remove('language', language)"
+        >x</span
+      >
+    </div>
+    } @for(tool of filters.tools; track $index){
+    <div class="flex">
+      <div
+        class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg text-dark-cyan-des font-bold text-lg"
+      >
+        {{ tool }}
+      </div>
+      <span
+        class="text-light-gray font-bold text-xl cursor-pointer bg-dark-cyan-des hover:bg-dark-cyan px-3 py-2 rounded-r-lg"
+        (click)="remove('tool', tool)"
+        >x</span
+      >
+    </div>
+    }
+  </div>
+  <button
+    class="text-dark-gray hover:text-dark-cyan-des hover:underline px-4 font-semibold"
+    (click)="clear()"
+  >
+    Clear
+  </button>
+</div>
+}

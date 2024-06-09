@@ -1,3 +1,9 @@
+<filter-display
+  [filters]="filters"
+  (removeFilter)="removeFilter($event)"
+  (clearFilters)="clearFilters()"
+></filter-display>
+
 @if(job){
 <div class="bg-light-cyan drop-shadow-2xl rounded-xl mx-6 my-14 font-primary">
   <div
@@ -26,7 +32,9 @@
           }
         </div>
 
-        <div class="text-dark-cyan text-lg font-bold mt-3 md:mt-1 mb-2 md:mb-0">
+        <div
+          class="text-dark-cyan hover:text-dark-cyan-des text-lg cursor-pointer font-bold mt-3 md:mt-1 mb-2 md:mb-0"
+        >
           {{ job.position }}
         </div>
 
@@ -41,19 +49,31 @@
     </div>
     <hr class="md:hidden block" />
     <div>
-      <ul class="flex flex-wrap gap-2 text-dark-cyan-des font-bold text-lg">
-        <li class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg">
+      <ul
+        class="flex flex-wrap gap-2 text-dark-cyan-des font-bold text-lg cursor-pointer"
+      >
+        <li
+          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg"
+        >
           {{ job.role }}
         </li>
-        <li class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg">
+        <li
+          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg"
+        >
           {{ job.level }}
         </li>
         @for(language of job.languages; track job.id){
-        <li class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg">
+        <li
+          (click)="addFilter('language', language)"
+          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg"
+        >
           {{ language }}
         </li>
         } @for(tool of job.tools; track job.id){
-        <li class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg">
+        <li
+          (click)="addFilter('tool', tool)"
+          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg"
+        >
           {{ tool }}
         </li>
         }
