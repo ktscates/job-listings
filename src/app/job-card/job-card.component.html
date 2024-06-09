@@ -1,40 +1,64 @@
 @if(job){
 <div class="bg-light-cyan drop-shadow-2xl rounded-xl mx-6 my-14 font-primary">
-  <div class="flex flex-col gap-4 px-6 py-20">
-    <div class="w-16 h-16 -mt-28">
-      <img [src]="job.logo" alt="" />
+  <div
+    class="flex flex-col gap-4 px-4 py-20 md:flex-row md:justify-between md:py-8"
+  >
+    <div class="md:flex md:gap-5">
+      <div class="w-16 h-16 -mt-28 md:mt-0 md:w-24 md:h-24">
+        <img [src]="job.logo" alt="" />
+      </div>
+
+      <div>
+        <div class="flex gap-4 md:gap-6 mt-4 md:mt-0">
+          <h2 class="text-lg font-bold text-dark-cyan-des">
+            {{ job.company }}
+          </h2>
+          @if(job.new === true){
+          <span
+            class="uppercase bg-dark-cyan-des text-white font-bold rounded-full px-2 flex items-center text-lg"
+            >new!</span
+          >
+          } @if(job.featured === true){
+          <span
+            class="uppercase bg-dark-cyan text-white font-bold rounded-full px-2 flex items-center text-lg"
+            >featured</span
+          >
+          }
+        </div>
+
+        <div class="text-dark-cyan text-lg font-bold mt-3 md:mt-1 mb-2 md:mb-0">
+          {{ job.position }}
+        </div>
+
+        <ul
+          class="flex gap-4 text-dark-gray font-normal text-lg md:mt-0.5 mt-0"
+        >
+          <li>{{ job.postedAt }}</li>
+          <li>{{ job.contract }}</li>
+          <li>{{ job.location }}</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="flex gap-4">
-      <h2 class="text-lg font-bold text-dark-cyan-des">{{ job.company }}</h2>
-      @if(job.new === true){
-      <span
-        class="uppercase bg-dark-cyan-des text-white font-bold rounded-full px-2 flex items-center text-lg"
-        >new!</span
-      >
-      } @if(job.featured === true){
-      <span
-        class="uppercase bg-dark-cyan text-white font-bold rounded-full px-2 flex items-center text-lg"
-        >featured</span
-      >
-      }
+    <hr class="md:hidden block" />
+    <div>
+      <ul class="flex flex-wrap gap-2 text-dark-cyan-des font-bold text-lg">
+        <li class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg">
+          {{ job.role }}
+        </li>
+        <li class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg">
+          {{ job.level }}
+        </li>
+        @for(language of job.languages; track job.id){
+        <li class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg">
+          {{ language }}
+        </li>
+        } @for(tool of job.tools; track job.id){
+        <li class="bg-dark-cyan-des bg-opacity-10 px-2 py-2 rounded-lg">
+          {{ tool }}
+        </li>
+        }
+      </ul>
     </div>
-
-    <div class="text-dark-cyan text-lg font-bold">{{ job.position }}</div>
-
-    <ul class="flex gap-4 text-dark-gray font-semibold">
-      <li>{{ job.postedAt }}</li>
-      <li>{{ job.contract }}</li>
-      <li>{{ job.location }}</li>
-    </ul>
-    <hr />
-
-    <ul class="flex flex-wrap justify-between text-dark-cyan-des font-bold">
-      <li>{{ job.role }}</li>
-      <li>{{ job.level }}</li>
-      <li>{{ job.languages }}</li>
-      <li>{{ job.tools }}</li>
-    </ul>
   </div>
 </div>
 }

@@ -1,12 +1,19 @@
-<div class="w-full">
+<div class="w-full lg:max-w-[1440px] lg:mx-auto">
   <img
-    class="w-full bg-dark-cyan-des"
+    class="lg:hidden block w-full bg-dark-cyan-des"
     src="../assets/images/bg-header-mobile.svg"
+    alt="header"
+  />
+  <img
+    class="hidden lg:block w-full bg-dark-cyan-des"
+    src="../assets/images/bg-header-desktop.svg"
     alt="header"
   />
 </div>
 
-<div class="bg-dark-cyan-des bg-opacity-15 min-h-screen py-2">
+<div
+  class="bg-dark-cyan-des bg-opacity-20 min-h-screen py-2 lg:max-w-[1440px] lg:mx-auto"
+>
   @for(job of jobs; track job.id){
   <job-card [job]="job" />
   }
