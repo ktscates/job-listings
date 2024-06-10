@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Manage landing page](/images/desktop-preview.jpg)
+![Job listings with filtering](/src/assets/images/desktop-preview.jpg)
 
 ### Links
 
