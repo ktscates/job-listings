@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3a0c17fc-9e72-435e-a873-3ba29a6e338c/deploy-status)](https://app.netlify.com/sites/ktscates-job-listing/deploys) ![Github actions](https://github.com/ktscates/rest-countries-app/actions/workflows/node.js.yml/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3a0c17fc-9e72-435e-a873-3ba29a6e338c/deploy-status)](https://app.netlify.com/sites/ktscates-job-listing/deploys) ![Github actions](https://github.com/ktscates/job-listings/actions/workflows/node.js.yml/badge.svg)
 
 # Frontend Mentor - Job listings with filtering
 
