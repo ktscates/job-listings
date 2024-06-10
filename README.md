@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/88349b7b-8ab9-4cf8-80e9-22b5d4fdeed6/deploy-status)](https://app.netlify.com/sites/gregarious-flan-6a0381/deploys) ![Github actions](https://github.com/ktscates/manage-landing-page/actions/workflows/node.js.yml/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3a0c17fc-9e72-435e-a873-3ba29a6e338c/deploy-status)](https://app.netlify.com/sites/ktscates-job-listing/deploys) ![Github actions](https://github.com/ktscates/manage-landing-page/actions/workflows/node.js.yml/badge.svg)
 
 # Frontend Mentor - Job listings with filtering
 
@@ -19,7 +19,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [On github](https://github.com/ktscates/job-listings)
-- Live Site URL: [Live](https://gregarious-flan-6a0381.netlify.app/)
+- Live Site URL: [Live](https://ktscates-job-listing.netlify.app/)
 
 ### Built with
 
