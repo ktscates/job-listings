@@ -1,13 +1,9 @@
-<filter-display
-  [filters]="filters"
-  (removeFilter)="removeFilter($event)"
-  (clearFilters)="clearFilters()"
-></filter-display>
-
 @if(job){
-<div class="bg-light-cyan drop-shadow-2xl rounded-xl mx-6 my-14 font-primary">
+<div
+  class="bg-light-cyan drop-shadow-2xl rounded-xl mx-6 mt-10 lg:mx-44 md:mx-12 font-primary"
+>
   <div
-    class="flex flex-col gap-4 px-4 py-20 md:flex-row md:justify-between md:py-8"
+    class="flex flex-col gap-4 px-4 py-20 md:flex-row md:justify-between md:items-center md:py-6"
   >
     <div class="md:flex md:gap-5">
       <div class="w-16 h-16 -mt-28 md:mt-0 md:w-24 md:h-24">
@@ -21,25 +17,25 @@
           </h2>
           @if(job.new === true){
           <span
-            class="uppercase bg-dark-cyan-des text-white font-bold rounded-full px-2 flex items-center text-lg"
+            class="uppercase bg-dark-cyan-des text-white font-bold rounded-full px-2.5 py-1 flex text-sm items-center"
             >new!</span
           >
           } @if(job.featured === true){
           <span
-            class="uppercase bg-dark-cyan text-white font-bold rounded-full px-2 flex items-center text-lg"
+            class="uppercase bg-dark-cyan text-white font-bold rounded-full px-2.5 py-1 flex text-sm text-center"
             >featured</span
           >
           }
         </div>
 
         <div
-          class="text-dark-cyan hover:text-dark-cyan-des text-lg cursor-pointer font-bold mt-3 md:mt-1 mb-2 md:mb-0"
+          class="text-dark-cyan hover:text-dark-cyan-des text-2xl cursor-pointer font-bold mt-3 md:mt-1 mb-2 md:mb-0"
         >
           {{ job.position }}
         </div>
 
         <ul
-          class="flex gap-4 text-dark-gray font-normal text-lg md:mt-0.5 mt-0"
+          class="flex items-center gap-4 text-dark-gray font-normal text-lg md:mt-0.5 mt-0"
         >
           <li>{{ job.postedAt }}</li>
           <li>{{ job.contract }}</li>
@@ -53,26 +49,26 @@
         class="flex flex-wrap gap-2 text-dark-cyan-des font-bold text-lg cursor-pointer"
       >
         <li
-          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg"
+          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg text-md"
         >
           {{ job.role }}
         </li>
         <li
-          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg"
+          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg text-md"
         >
           {{ job.level }}
         </li>
         @for(language of job.languages; track job.id){
         <li
-          (click)="addFilter('language', language)"
-          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg"
+          (click)="emitFilter('language', language)"
+          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg text-md"
         >
           {{ language }}
         </li>
         } @for(tool of job.tools; track job.id){
         <li
-          (click)="addFilter('tool', tool)"
-          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg"
+          (click)="emitFilter('tool', tool)"
+          class="bg-dark-cyan-des bg-opacity-5 hover:bg-dark-cyan-des hover:text-light-cyan px-2 py-2 rounded-lg text-md"
         >
           {{ tool }}
         </li>

@@ -12,9 +12,14 @@
 </div>
 
 <div
-  class="bg-dark-cyan-des bg-opacity-20 min-h-screen py-2 lg:max-w-[1440px] lg:mx-auto"
+  class="bg-dark-cyan-des bg-opacity-20 min-h-screen py-2 md:max-w-[1440px] md:mx-auto"
 >
-  @for(job of jobs; track job.id){
-  <job-card [job]="job" />
+  <filter-display
+    [filters]="filters"
+    (removeFilter)="removeFilter($event)"
+    (clearFilters)="clearFilters()"
+  />
+  @for(job of filteredJobs; track job.id){
+  <job-card [job]="job" (addFilter)="addFilter($event.type, $event.value)" />
   }
 </div>

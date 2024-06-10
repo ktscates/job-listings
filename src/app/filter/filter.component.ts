@@ -8,18 +8,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './filter.component.css',
 })
 export class FilterComponent {
-  @Input()
-  filters: { languages: string[]; tools: string[] } = {
-    languages: [],
-    tools: [],
-  };
-
-  @Output()
-  removeFilter = new EventEmitter<{
+  @Input() filters!: { languages: string[]; tools: string[] };
+  @Output() removeFilter = new EventEmitter<{
     type: 'language' | 'tool';
     value: string;
   }>();
-
   @Output() clearFilters = new EventEmitter<void>();
 
   remove(type: 'language' | 'tool', value: string) {
